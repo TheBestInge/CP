@@ -11,6 +11,10 @@ typedef pair<int, int> pii;
 typedef vector<int> vi;
 
 //{}  []
+
+//https://vjudge.net/contest/614531#problem/A
+
+
 int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
