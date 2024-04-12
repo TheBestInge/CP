@@ -1,20 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define f(i,a,b) for (int i =a; i<b; i++)
+
+#define f(i,a,b) for(int i=a;i<b;i++)
+#define ff first
+#define ss second
+#define pb push_back
+
+typedef long long ll;
+typedef pair<int, int> pii;
+typedef vector<int> vi;
+
 int main (){
-    int t,w,h;
-    cin>>t;
-    vector <string> ans;
+    int t;cin>>t;
     f(i,0,t){
-        cin>>w>>h;
-        if(w==h){
-            ans.push_back("Square");
-        }else{
-            ans.push_back("Rectangle");
-        }
-    }
-    f(i,0,t){
-        cout<<ans[i]<<endl;
+        int w, h; cin>>w>>h;
+        w!=h ? cout<<"Rectangle"<<endl : cout<<"Square"<<endl;
     }
     return 0 ;
 }

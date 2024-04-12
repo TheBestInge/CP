@@ -1,11 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define f(i,a,b) for (int i =a; i<b; i++)
+#define f(i,a,b) for(int i=a;i<b;i++)
+#define ff first
+#define ss second
 #define pb push_back
 
-using pii=pair<int,int>;
-using vi=vector<int>;
+typedef long long ll;
+typedef pair<int, int> pii;
+typedef vector<int> vi;
 
 //freopen("input.txt","r",stdin);
 //freopen("output.txt","w",stdout);

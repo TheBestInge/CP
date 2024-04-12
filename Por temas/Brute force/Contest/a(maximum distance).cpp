@@ -30,11 +30,13 @@ int main() {
         int m; cin>>m;
         y.pb(m);
     }
-    int mx=0;
+    int c=0;
     f(i,0,n){
         f(j,i+1,n){
-            mx=max(mx, (x[i]-x[j]) * (y[i]-y[j]));
+            int hip=pow(abs(x[i]-x[j]),2) + pow(abs(y[i]-y[j]),2);
+            c=max(c, hip);
         }
     }
+    cout<<c<<endl;
     return 0;
 }
