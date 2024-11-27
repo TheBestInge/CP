@@ -18,23 +18,23 @@ int main(){
     //freopen("output.txt", "w", stdout);
     ios::sync_with_stdio(0);
     cin.tie(0);
-
-    string s; cin>>s;
-    map<char,int>m;
-    for(auto c:s){
-        m[c]+=1;
-    }
-    char l;
-    for(auto x:m){
-        if(x.second==1){
-            l=x.first;
+    
+    int t; cin>>t;
+    while(t--){
+        int n; cin>>n;
+        vi v;
+        f(i,0,2*n){
+            int x;cin>>x;
+            v.pb(x);
         }
-    }
-    f(i,0,s.length() ){
-        if(s[i]==l){
-            cout<<i+1<<endl;
+        int ans=0;
+        sort(v.begin(), v.end());
+        for(int i=0 ; i<2*n ; i+=2){
+            ans+=min(v[i],v[i+1]);
         }
+        cout<<ans<<endl;
     }
 
+    
     return 0 ;
 }

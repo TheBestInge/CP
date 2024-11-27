@@ -9,17 +9,22 @@ using namespace std;
 typedef long long ll;
 typedef pair<int, int> pii;
 typedef vector<int> vi;
+typedef map <int,int> mii;
 
-//{}  []
-int main() {
+//#define a.all() a.begin(),a.end()
+
+void alReves(string){
+    
+}
+
+int main(){
+    //freopen("input.txt", "r", stdin);
+    //freopen("output.txt", "w", stdout);
     ios::sync_with_stdio(0);
     cin.tie(0);
     
-    int n,k; cin>>n>>k;
-    while(k--){
-        n%10==0 ? n=n/10 : n--;
-    }
-    cout<<n<<endl;
+    int a,b; cin>>a>>b;
+    cout<<a+b<<endl;
 
-    return 0;
+    return 0 ;
 }

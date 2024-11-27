@@ -1,3 +1,5 @@
+//https://codeforces.com/problemset/problem/441/A
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -18,23 +20,26 @@ int main(){
     //freopen("output.txt", "w", stdout);
     ios::sync_with_stdio(0);
     cin.tie(0);
-
-    string s; cin>>s;
-    map<char,int>m;
-    for(auto c:s){
-        m[c]+=1;
-    }
-    char l;
-    for(auto x:m){
-        if(x.second==1){
-            l=x.first;
-        }
-    }
-    f(i,0,s.length() ){
-        if(s[i]==l){
-            cout<<i+1<<endl;
-        }
-    }
-
+    
+    int n , v; cin>>n>>v;
+    set<int> s;
+    int cant=0;
+	f(j,0,n){
+	    int num;cin>>num;
+	    int trat=0;
+	    f(i,0,num){
+	        int pre;cin>>pre;
+	        if(pre<v){
+	            trat++;
+	            s.insert(j+1);
+	        }
+	    }
+	    if(trat>0)cant++;
+	}   
+    cout<<cant<<endl;
+	for(auto x:s){
+	        cout<<x<<" ";
+	}
+	   
     return 0 ;
 }

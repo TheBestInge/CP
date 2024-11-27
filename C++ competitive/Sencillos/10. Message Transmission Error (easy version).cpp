@@ -13,28 +13,24 @@ typedef map <int,int> mii;
 
 //#define a.all() a.begin(),a.end()
 
+
 int main(){
     //freopen("input.txt", "r", stdin);
     //freopen("output.txt", "w", stdout);
     ios::sync_with_stdio(0);
     cin.tie(0);
-
-    string s; cin>>s;
-    map<char,int>m;
-    for(auto c:s){
-        m[c]+=1;
-    }
-    char l;
-    for(auto x:m){
-        if(x.second==1){
-            l=x.first;
-        }
-    }
-    f(i,0,s.length() ){
-        if(s[i]==l){
-            cout<<i+1<<endl;
-        }
-    }
+    
+    string s;cin>>s;
+	int i=0,j=1;
+	while(j<s.length()){
+		if(s[i]==s[j]){i++,j++;}
+		else {j-=i-1;i=0;}
+	}
+	if(i>j-i){
+		cout<<"YES"<<endl;
+		cout<<s.substr(0,i)<<endl;
+	}
+	else cout<<"NO"<<endl;
 
     return 0 ;
 }

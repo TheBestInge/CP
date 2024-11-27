@@ -13,6 +13,7 @@ typedef vector<int> vi;
 //freopen("input.txt","r",stdin);
 //freopen("output.txt","w",stdout);
 
+//funcion que da un numero mayor 
 int my_max(int a, int b){
     if (a>b){
         return a;
@@ -26,7 +27,7 @@ int main()
     f(i,0,cases){
         int days, ans = 0, unkw = 0,knw = 0;
         cin >> days;
-        f (i,0,days){
+        f (j,0,days){
             int cur_action;
             cin >> cur_action;
             if (cur_action==1){
